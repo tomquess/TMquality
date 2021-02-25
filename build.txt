@@ -1,0 +1,3 @@
+displayName = TMquality
+author = :DDD:D
+version = 0.1
