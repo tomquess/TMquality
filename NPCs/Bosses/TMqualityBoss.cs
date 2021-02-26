@@ -143,7 +143,7 @@ namespace TMquality.NPCs.Bosses
             } else if((double)npc.ai[0] >= 300 && (double)npc.ai[0] <350.0)
             {
 				stunned = true;
-				npc.defense = 40;
+				npc.defense = 400;
 				npc.damage = 300;
 				MoveTowards(npc, target, (float)(distance > 300 ? 20f : 20f), 30f);
 				npc.netUpdate = true;

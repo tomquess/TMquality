@@ -15,7 +15,7 @@ namespace TMquality.Items.Boss
 
         public override void SetStaticDefaults() 
 		{
-			DisplayName.SetDefault("Treasure bag"); // By default, capitalization in classnames will add spaces to the display name. You can customize the display name here by uncommenting this line.
+			DisplayName.SetDefault("Bulging bag full of coins"); // By default, capitalization in classnames will add spaces to the display name. You can customize the display name here by uncommenting this line.
 			Tooltip.SetDefault("<right> to open");
 		}
 
