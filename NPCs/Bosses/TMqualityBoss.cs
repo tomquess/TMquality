@@ -1,6 +1,8 @@
 using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria;
+using TMquality.Items.Boss;
+using TMquality.NPCs;
 using Terraria.Graphics.Shaders;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
@@ -61,8 +63,10 @@ namespace TMquality.NPCs.Bosses
 			npc.HitSound = SoundID.NPCHit1;
 			npc.DeathSound = SoundID.NPCDeath1;
 			music = mod.GetSoundSlot(SoundType.Music, "Sounds/Music/TMqualityBossMusic");
-			
 
+			bossBag = ModContent.ItemType<TMqualityBossTreasureBag>();
+			
+			
 		}
 
 
@@ -219,18 +223,18 @@ namespace TMquality.NPCs.Bosses
 		}
 
 		public override void FindFrame(int frameHeight)
-        {
-			
+		{
+
 
 
 			if (frame == 0)
-            {
+			{
 				npc.frame.Y = 0;
 
-            }else if(frame == 1)
+			} else if (frame == 1)
 			{
 				npc.frame.Y = frameHeight;
-			}else if (frame == 2)
+			} else if (frame == 2)
 			{
 				npc.frame.Y = frameHeight * 2;
 			}
@@ -247,13 +251,13 @@ namespace TMquality.NPCs.Bosses
 
         public override void NPCLoot()
         {
-			
+			TMqualityNpcs.TMqualityNpcsWorld.DownedTMqualityBoss = true;
 			if(Main.expertMode)
             {
 				npc.DropBossBags();
             } else
             {
-				Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ItemID.LifeCrystal, Main.rand.Next(1, 3));
+				Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ItemID.PlatinumCoin, Main.rand.Next(1, 3));
 				if(Main.rand.Next(7) == 0)
                 {
 					Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("TMqualityBossSummon"), 1);
