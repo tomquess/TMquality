@@ -31,6 +31,12 @@ namespace TMquality.NPCs.Bosses
 			Main.npcFrameCount[npc.type] = 5;
 		}
 
+		public override void ScaleExpertStats(int numPlayers, float bossLifeScale)
+		{
+			npc.lifeMax = (int)(npc.lifeMax * 0.5f * bossLifeScale);
+			npc.damage = (int)(npc.damage * 0.5f);
+		}
+
 
 
 		public override void SetDefaults() 
@@ -42,7 +48,7 @@ namespace TMquality.NPCs.Bosses
 			npc.aiStyle = -1;
 			npc.npcSlots = 5f;
 
-			npc.lifeMax = 5000000;
+			npc.lifeMax = 10000000;
 			npc.damage = 200;
 			npc.defense = 400;
 			npc.knockBackResist = 0f;
@@ -244,7 +250,6 @@ namespace TMquality.NPCs.Bosses
 			
 			if(Main.expertMode)
             {
-
 				npc.DropBossBags();
             } else
             {
