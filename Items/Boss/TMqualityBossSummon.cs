@@ -12,15 +12,15 @@ namespace TMquality.Items.Boss
 	{
 		public override void SetStaticDefaults() 
 		{
-			DisplayName.SetDefault("Item do summonowania"); // By default, capitalization in classnames will add spaces to the display name. You can customize the display name here by uncommenting this line.
-			Tooltip.SetDefault("Przywolywuje bossa PS Patryk to gejuch");
+			DisplayName.SetDefault("Eye from another world"); // By default, capitalization in classnames will add spaces to the display name. You can customize the display name here by uncommenting this line.
+			Tooltip.SetDefault("Developer is watching you from another dimension");
 		}
 
 		public override void SetDefaults() 
 		{
 			
-			item.width = 26;
-			item.height = 26;
+			item.width = 30;
+			item.height = 20;
 			item.useTime = 45;
 			item.useAnimation = 45;
 			item.useStyle = 4;
@@ -46,7 +46,8 @@ namespace TMquality.Items.Boss
         public override void AddRecipes() 
 		{
 			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(ItemID.Obsidian, 1);
+			recipe.AddIngredient(ItemID.Obsidian, 10);
+			recipe.AddIngredient(ItemID.LunarBar, 1);
 			recipe.AddTile(TileID.DemonAltar);
 			recipe.SetResult(this);
 			recipe.AddRecipe();

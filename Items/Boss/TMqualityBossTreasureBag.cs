@@ -22,7 +22,7 @@ namespace TMquality.Items.Boss
 		public override void SetDefaults() 
 		{
 			
-			item.width = 36;
+			item.width = 32;
 			item.height = 32;
 			item.maxStack = 999;
 			item.rare = 9;

@@ -52,7 +52,7 @@ namespace TMquality.NPCs.Bosses
 
 			npc.lifeMax = 10000000;
 			npc.damage = 200;
-			npc.defense = 400;
+			npc.defense = 600;
 			npc.knockBackResist = 0f;
 
 			npc.value = Item.buyPrice(gold: 10);
@@ -143,7 +143,7 @@ namespace TMquality.NPCs.Bosses
             } else if((double)npc.ai[0] >= 300 && (double)npc.ai[0] <350.0)
             {
 				stunned = true;
-				npc.defense = 400;
+				npc.defense = 500;
 				npc.damage = 300;
 				MoveTowards(npc, target, (float)(distance > 300 ? 20f : 20f), 30f);
 				npc.netUpdate = true;
@@ -151,7 +151,7 @@ namespace TMquality.NPCs.Bosses
             {
 				stunned = false;
 				npc.damage = 350;
-				npc.defense = 200;
+				npc.defense = 300;
 				if (!fastSpeed)
                 {
 					fastSpeed = true;
