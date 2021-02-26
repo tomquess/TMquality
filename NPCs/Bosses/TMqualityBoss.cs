@@ -31,12 +31,12 @@ namespace TMquality.NPCs.Bosses
 			Main.npcFrameCount[npc.type] = 5;
 		}
 
+
 		public override void ScaleExpertStats(int numPlayers, float bossLifeScale)
 		{
 			npc.lifeMax = (int)(npc.lifeMax * 0.5f * bossLifeScale);
 			npc.damage = (int)(npc.damage * 0.5f);
 		}
-
 
 
 		public override void SetDefaults() 
